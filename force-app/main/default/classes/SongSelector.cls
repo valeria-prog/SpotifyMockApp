@@ -23,7 +23,7 @@ public with sharing class SongSelector {
             SELECT Id, Name, Album_Id__c, Artist_Id__c, Release_Date__c, Duration__c
             FROM Song__c
             WHERE Album_Id__c = :albumId
-            ORDER BY Release_Date__c ASC
+            ORDER BY Release_Date__c ASC 
         ];
     }
     public SongSelector() {
