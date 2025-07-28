@@ -14,7 +14,7 @@ public with sharing class SongSelector {
             FROM Song__c
             WHERE Release_Date__c >= :Date.today()
             ORDER BY Release_Date__c ASC
-            LIMIT :limitSize
+            LIMIT :limitSize 
         ];
     }
 
