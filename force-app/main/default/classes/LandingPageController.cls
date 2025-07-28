@@ -27,5 +27,5 @@ public with sharing class LandingPageController {
     @AuraEnabled(cacheable=true)
     public static List<Artist__c> getAllArtists() {
         return ArtistSelector.getAllArtists();
-    }
+    } 
 }
