@@ -1,0 +1,64 @@
+<template>
+    <lightning-card title="Recent Albums">
+        <template if:true={albums}>
+            <ul>
+                <template for:each={albums} for:item="album">
+                    <li key={album.Id}>{album.Name}</li>
+                </template>
+            </ul>
+        </template>
+        <template if:true={error}>
+            <p class="slds-text-color_error">{error}</p>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="Upcoming Songs">
+        <template if:true={upcomingSongs}>
+            <ul>
+                <template for:each={upcomingSongs} for:item="song">
+                    <li key={song.Id}>{song.Name}</li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="Next Songs">
+        <template if:true={nextSongs}>
+            <ul>
+                <template for:each={nextSongs} for:item="song">
+                    <li key={song.Id}>{song.Name}</li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="Your Playlists">
+        <template if:true={playlists}>
+            <ul>
+                <template for:each={playlists} for:item="pl">
+                    <li key={pl.Id}>{pl.Name}</li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="Your Private Playlists">
+        <template if:true={privatePlaylists}>
+            <ul>
+                <template for:each={privatePlaylists} for:item="pl">
+                    <li key={pl.Id}>{pl.Name}</li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="Artists">
+        <template if:true={artists}>
+            <ul>
+                <template for:each={artists} for:item="artist">
+                    <li key={artist.Id}>{artist.Name}</li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
+</template>
