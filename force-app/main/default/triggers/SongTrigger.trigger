@@ -1,6 +1,10 @@
-// Trigger for Song__c to assign the nearest album based on artist before insert and update 
-// if the album is not set.
-// This trigger calls the SongAlbumHandler to handle the logic
+/**
+ * @description       : Trigger for Song__c to assign the nearest album based on artist before insert and update
+ * @author            : Valeria Cobian
+ * @group             : Bebotes
+ * @last modified on  : 08-06-2025
+ * @last modified by  : Valeria Cobian
+**/
 trigger SongTrigger on Song__c (before insert, before update) {
     if (Trigger.isBefore) {
         if (Trigger.isInsert) {
